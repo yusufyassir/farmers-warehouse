@@ -7,5 +7,6 @@ urlpatterns = [
     path('warehouse', views.WarehouseSet.as_view(
         {'get':'list',
          'post':'create'})
-    )
+    ),
+    path('warehouse/<str:batch>',views.SinglewarehouseSet.as_view()),
 ]
